@@ -14,8 +14,7 @@ __pycache__/
 # Dataset (too large for git)
 mnist_jpg/
 
-# Generated output
-documentation.pdf
+
 
 # OS
 .DS_Store
