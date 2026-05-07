@@ -4,7 +4,9 @@ import kagglehub
 from skimage import io
 import matplotlib.pyplot as plt
 
-dataset_path = kagglehub.dataset_download("ben519/mnist-as-png")
+dataset_path = os.path.join(
+    kagglehub.dataset_download("ben519/mnist-as-png"), "mnist-png", "train"
+)
 print(f"Dataset path: {dataset_path}")
 
 classes = [str(i) for i in range(10)]

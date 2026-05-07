@@ -62,7 +62,7 @@ path = kagglehub.dataset_download("ben519/mnist-as-png")
 print("Path to dataset files:", path)
 ```
 
-The dataset (`ben519/mnist-as-png` on Kaggle) contains PNG images of handwritten digits organized into subfolders `0`–`9`. The downloaded path is cached locally and reused on subsequent runs — no manual download needed.
+The dataset (`ben519/mnist-as-png` on Kaggle) is cached locally and reused on subsequent runs — no manual download needed. The actual images live under `mnist-png/train/0`–`9/` inside the downloaded path. The scripts handle this path automatically.
 
 ## Usage
 

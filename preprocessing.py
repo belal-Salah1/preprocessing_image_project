@@ -4,7 +4,9 @@ import kagglehub
 from skimage import io, transform, color
 import matplotlib.pyplot as plt
 
-dataset_path = kagglehub.dataset_download("ben519/mnist-as-png")
+dataset_path = os.path.join(
+    kagglehub.dataset_download("ben519/mnist-as-png"), "mnist-png", "train"
+)
 folder_0 = os.path.join(dataset_path, "0")
 image_path = os.path.join(folder_0, os.listdir(folder_0)[0])
 
