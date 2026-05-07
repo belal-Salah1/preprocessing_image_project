@@ -1,10 +1,14 @@
 # Stage 4: Edge Detection & Segmentation
+import os
 import numpy as np
+import kagglehub
 from skimage import io, color
 import cv2
 import matplotlib.pyplot as plt
 
-image_path = "mnist_jpg/0/img_1.jpg"  # ← update path to a valid image
+dataset_path = kagglehub.dataset_download("ben519/mnist-as-png")
+folder_0 = os.path.join(dataset_path, "0")
+image_path = os.path.join(folder_0, os.listdir(folder_0)[0])
 
 image = io.imread(image_path)
 if image.ndim == 3:

@@ -1,9 +1,12 @@
 # Stage 1: Image Dataset Collection
 import os
+import kagglehub
 from skimage import io
 import matplotlib.pyplot as plt
 
-dataset_path = "mnist_jpg"
+dataset_path = kagglehub.dataset_download("ben519/mnist-as-png")
+print(f"Dataset path: {dataset_path}")
+
 classes = [str(i) for i in range(10)]
 
 # Check folders and count images
