@@ -1,8 +1,8 @@
-# Person 2: Preprocessing
+# Stage 2: Preprocessing
 from skimage import io, transform, color
 import matplotlib.pyplot as plt
 
-image_path = "mnist_jpg/0/img_1.jpg"  # ← عدّل المسار
+image_path = "mnist_jpg/0/img_1.jpg"  # ← update path to a valid image
 
 image = io.imread(image_path)
 
@@ -16,7 +16,7 @@ else:
     image_gray = image_resized
 
 # Normalize to [0, 1]
-image_norm = image_gray / image_gray.max()
+image_norm = image_gray / image_gray.max() if image_gray.max() > 0 else image_gray
 
 # Invert (enhancement)
 image_inv = 1.0 - image_norm

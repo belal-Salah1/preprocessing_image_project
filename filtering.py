@@ -1,4 +1,4 @@
-# Person 3: Image Filtering
+# Stage 3: Image Filtering
 import numpy as np
 from skimage import io, color
 from skimage.filters import gaussian, median
@@ -6,7 +6,7 @@ from skimage.morphology import disk
 import cv2
 import matplotlib.pyplot as plt
 
-image_path = "mnist_jpg/0/img_1.jpg"  # ← عدّل المسار
+image_path = "mnist_jpg/0/img_1.jpg"  # ← update path to a valid image
 
 image = io.imread(image_path)
 if image.ndim == 3:

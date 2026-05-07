@@ -1,10 +1,10 @@
-# Person 4: Edge Detection & Segmentation
+# Stage 4: Edge Detection & Segmentation
 import numpy as np
 from skimage import io, color
 import cv2
 import matplotlib.pyplot as plt
 
-image_path = "mnist_jpg/0/img_1.jpg"  # ← عدّل المسار
+image_path = "mnist_jpg/0/img_1.jpg"  # ← update path to a valid image
 
 image = io.imread(image_path)
 if image.ndim == 3:

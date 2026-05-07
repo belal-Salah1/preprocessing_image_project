@@ -1,4 +1,4 @@
-# Person 1: Image Dataset Collection
+# Stage 1: Image Dataset Collection
 import os
 from skimage import io
 import matplotlib.pyplot as plt

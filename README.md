@@ -4,12 +4,13 @@ A collaborative college project demonstrating a complete image processing pipeli
 
 ## Project Structure
 
-| File | Owner | Description |
-|------|-------|-------------|
-| `person1_dataset_collection.py` | Person 1 | Dataset exploration and visualization |
-| `person2_preprocessing.py` | Person 2 | Image resizing, grayscale conversion, normalization |
-| `person3_filtering.py` | Person 3 | Gaussian blur, median filter, sharpening |
-| `person4_edge_detection.py` | Person 4 | Edge detection (Sobel, Canny) and segmentation (Otsu) |
+| File | Description |
+|------|-------------|
+| `project_pipeline.py` | **Full pipeline** — runs all 4 stages end-to-end |
+| `dataset_collection.py` | Stage 1 — Dataset exploration and visualization |
+| `preprocessing.py` | Stage 2 — Image resizing, grayscale conversion, normalization |
+| `filtering.py` | Stage 3 — Gaussian blur, median filter, sharpening |
+| `edge_detection.py` | Stage 4 — Edge detection (Sobel, Canny) and segmentation (Otsu) |
 
 ## Pipeline Overview
 
@@ -67,13 +68,19 @@ mnist_jpg/
 
 ## Usage
 
-Run each script independently from the project root:
+Run the full pipeline (recommended):
 
 ```bash
-python person1_dataset_collection.py
-python person2_preprocessing.py
-python person3_filtering.py
-python person4_edge_detection.py
+python3 project_pipeline.py
 ```
 
-> Before running stages 2–4, update the `image_path` variable at the top of each script to point to a valid image in your dataset.
+Or run each stage individually:
+
+```bash
+python3 dataset_collection.py
+python3 preprocessing.py
+python3 filtering.py
+python3 edge_detection.py
+```
+
+> For the individual scripts (stages 2–4), update the `image_path` variable at the top of each file to point to a valid image in your dataset. The pipeline script picks the image automatically.
